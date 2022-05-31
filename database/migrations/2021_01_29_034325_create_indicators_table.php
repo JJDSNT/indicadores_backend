@@ -19,15 +19,14 @@ class CreateIndicatorsTable extends Migration
             $table->string('description');
             $table->integer('remote_id');
             $table->string('source');
-            $table->url('source_url');
+            $table->string('source_url');
             $table->string('nome_responsavel');
-            $table->email('email_responsavel');
+            $table->string('email_responsavel');
             $table->string('cargo_responsavel');
             $table->string('frequencie');
             $table->char('direction');
             $table->string('competency');
             $table->integer('competency_id');
-            $table->timestamps();
             $table->unique(['source', 'remote_id']);
             $table->timestamps();
         });
